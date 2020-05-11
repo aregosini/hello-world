@@ -1,5 +1,6 @@
 let deck;
 
+
 async function createDeck() {
 	const response = await fetch(
 		"https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
@@ -10,9 +11,9 @@ async function createDeck() {
 async function drawOut(deck, amount) {
 	const response = await fetch(
 		"https://deckofcardsapi.com/api/deck/" +
-			deck.deck_id +
-			"/draw/?count=" +
-			amount,
+		deck.deck_id +
+		"/draw/?count=" +
+		amount,
 	);
 	const json = await response.json();
 	return json;
